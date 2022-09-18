@@ -49,6 +49,15 @@ public class Lab {
 		}
 	}
 	
+	static void showArr (double arr [][]) {
+		for (int i = 0; i < arr.length; i++ ) {
+			for (int j = 0; j < arr[i].length; j++ ) {
+				System.out.format("%8.5f |", arr[i][j]);
+			}
+			System.out.println("");
+		}
+	}
+	
 	public static void taskExecution () {
 		gArrayFill();
 		xArrayFill();
@@ -64,10 +73,9 @@ public class Lab {
 						b[i][j] = mathCalculationsTypeThree (x[j]);
 					}
 				}
-				System.out.format("%8.5f |", b[i][j]); //вывод, чтобы не гонять двумерный массив 2 раза.
 			}
-			System.out.println("");
 		}
+		showArr(b);
 	}
 
 	public static void main (String args[]) {
